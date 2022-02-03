@@ -4,11 +4,13 @@ const {
 } = require('../controllers/categoriesController/categoriesControler');
 
 const { validateCategory } = require('../validations/validateCategory');
-// const { list } = require('../controllers/categories/listget');
+const { 
+  getCategorieslist,
+} = require('../controllers/categoriesController/getCategorieslistController');
 
 const categoryRouter = express.Router({ mergeParams: true });
 
 categoryRouter.post('/', validateCategory, createCategoryController);
-// categoryRouter.get('/', list);
+categoryRouter.get('/', getCategorieslist);
 
 module.exports = { categoryRouter };
