@@ -12,7 +12,6 @@ app.use('/login', loguinRouter);
 app.use('/categories', categoryRouter);
 app.use('/post', postRouter);
 
-// não remova esse endpoint, e para o avaliador funcionar
 app.get('/', (request, response) => {
   response.send();
 });
